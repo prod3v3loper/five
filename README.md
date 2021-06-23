@@ -33,8 +33,19 @@ php bin/console doctrine:migrations:migrate
 ```
 
 Set a Admin in src/DataFixtures UserFixtures.php and fire this in console
-```
+```shell
 php bin/console doctrine:fixtures:load
+```
+```php
+    public function load(ObjectManager $manager) {
+        $user = new User();
+        $user->setUsername('yourusername');
+        $user->setEmail('your@email');
+        $user->setPassword($this->encoder->encodePassword($user, 'yourpassword'));
+
+        $manager->persist($user);
+        $manager->flush();
+    }
 ```
 Register function comes later...
 
