@@ -8,6 +8,11 @@ Symfony 5
 - Webpack, Babel, Typescript, Sass...
 - Bootstrap
 
+**Create a .env.local file like your local development**
+- Database
+- Mailer
+...
+
 Clone the project to download its contents in your project folder:
 ```
 cd projects/
@@ -20,9 +25,13 @@ composer install
 npm install
 ```
 
-To run build typescript in **app.ts** enter:
+To run build develop enter:
 ```
 npm run dev
+```
+To run build production enter:
+```
+npm run build
 ```
 
 To run symfony server:
