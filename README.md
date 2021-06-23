@@ -25,6 +25,12 @@ composer install
 npm install
 ```
 
+Set a Admin in src/DataFixtures UserFixtures.php and fire this in console
+```
+php bin/console doctrine:fixtures:load
+```
+Register function comes later...
+
 To run build develop enter:
 ```
 npm run dev
