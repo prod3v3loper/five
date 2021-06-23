@@ -25,6 +25,13 @@ composer install
 npm install
 ```
 
+Create database and tables
+```
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```
+
 Set a Admin in src/DataFixtures UserFixtures.php and fire this in console
 ```
 php bin/console doctrine:fixtures:load
