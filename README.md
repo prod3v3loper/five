@@ -33,7 +33,7 @@ php bin/console doctrine:migrations:migrate
 ```
 
 Set a Admin in src/DataFixtures UserFixtures.php and fire this in console
-```shell
+```bash
 php bin/console doctrine:fixtures:load
 ```
 ```php
